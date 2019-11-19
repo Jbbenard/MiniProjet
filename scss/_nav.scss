@@ -1,0 +1,34 @@
+$color_nav: purple !default;
+$align_nav: "left" !default;
+$text_color_nav: black !default;
+
+@mixin nav($color:$color_nav){
+    background-color: $color;
+    color: $text_color_nav;
+    text-decoration: none;
+    box-shadow: 1px 1px 12px #555;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+@mixin ul($align:$align_nav){
+    list-style-type: none;
+    padding-left: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+}
+
+
+@mixin li(){
+    padding: 10px;
+    font-size: 20px;
+    font-family: "Arial";
+}
+
+@mixin a($text_color:$text_color_nav){
+    color: $text_color;
+    text-decoration: none;
+    font-weight: 700;
+}

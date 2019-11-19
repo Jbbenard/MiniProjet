@@ -1,0 +1,171 @@
+$succes: green !default;
+$danger: black !default;
+$avertissement: yellow !default;
+$informative: purple !default;
+@import "alert";
+
+$taille_bouton : "small";
+$color_bouton: black;
+$style_bouton : outline;
+@import "bouton";
+
+$color_nav: white !default;
+$align_nav: "left" !default;
+@import "nav";
+
+$gutter: 2% !default;
+$numcols: 14 !default;
+@import "build";
+
+.alert-success{
+  @include alert_general();
+}
+
+.cefini{
+  @include alert_general($danger);
+}
+
+.attention{
+  @include alert_general($avertissement);
+}
+
+.message-info{
+  @include alert_general($informative);
+}
+
+.btn {
+    @include btn_general();
+}
+
+nav {
+    @include nav();
+  p{
+    color:gray;
+  }
+
+}
+
+ul {
+    @include ul();
+}
+
+li {
+    @include li();
+}
+
+a {
+    @include a();
+}
+
+.row {
+  @include grid-row();
+}
+
+.col {
+  @include grid-col();
+}
+
+.col + .col {
+  margin-left: $gutter;
+}
+
+#title{
+  flex:1;
+}
+#res{
+  flex:2;
+  text-align: end;
+}
+
+.menu{
+  color : orange;
+  display: flex;
+  flex-direction: column;
+  box-shadow: none;
+  div{
+    text-align: left;
+    margin-left: 30px;
+  }
+
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h3{
+  color: orange;
+}
+
+@for $i from 1 through 3 {
+  .b#{$i} {
+    transform:rotate(1deg);
+    -ms-transform:rotate(1deg); /* Internet Explorer */
+    -moz-transform:rotate(1deg); /* Firefox */
+    -webkit-transform:rotate(1deg); /* Safari et Chrome */
+    -o-transform:rotate(1deg); /* Opera */
+  }
+}
+
+@for $i from 4 through 5 {
+  .b#{$i} {
+    transform:rotate(-1deg);
+    -ms-transform:rotate(-1deg); /* Internet Explorer */
+    -moz-transform:rotate(-1deg); /* Firefox */
+    -webkit-transform:rotate(-1deg); /* Safari et Chrome */
+    -o-transform:rotate(-1deg); /* Opera */
+  }
+}
+
+@for $i from 6 through 8 {
+  .b#{$i} {
+    transform:rotate(1deg);
+    -ms-transform:rotate(1deg); /* Internet Explorer */
+    -moz-transform:rotate(1deg); /* Firefox */
+    -webkit-transform:rotate(1deg); /* Safari et Chrome */
+    -o-transform:rotate(1deg); /* Opera */
+  }
+}
+
+@for $i from 9 through 10 {
+  .b#{$i} {
+    transform:rotate(-1deg);
+    -ms-transform:rotate(-1deg); /* Internet Explorer */
+    -moz-transform:rotate(-1deg); /* Firefox */
+    -webkit-transform:rotate(-1deg); /* Safari et Chrome */
+    -o-transform:rotate(-1deg); /* Opera */
+  }
+}
+
+@for $i from 1 through 14 {
+  .xs#{$i} {
+
+  }
+  .l#{$i} {
+
+  }
+  .el#{$i} {
+
+  }
+}
+
+
+@media screen and (max-width: 56em){
+  .col{
+    font-size: 10px;
+  }
+  nav{
+    #title{
+      flex:2;
+      h2{font-size: 20px}
+    }
+    p{
+      font-size:10px;
+    }
+  }
+}
+
+.btnNext{
+  margin-left: 50%;
+}
