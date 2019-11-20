@@ -1,0 +1,93 @@
+$gutter: 1% !default;
+$numcols: 12 !default;
+@import "build";
+
+.row {
+  @include grid-row();
+}
+
+.col {
+  @include grid-col();
+}
+
+.col {
+  margin-left: $gutter/2;
+  margin-right: $gutter/2;
+}
+
+.rot_droit {
+	transform:rotate(1deg);
+    -ms-transform:rotate(1deg); /* Internet Explorer */
+    -moz-transform:rotate(1deg); /* Firefox */
+    -webkit-transform:rotate(1deg); /* Safari et Chrome */
+    -o-transform:rotate(1deg); /* Opera */
+}
+
+.rot_gauche {
+	transform:rotate(-1deg);
+    -ms-transform:rotate(-1deg); /* Internet Explorer */
+    -moz-transform:rotate(-1deg); /* Firefox */
+    -webkit-transform:rotate(-1deg); /* Safari et Chrome */
+    -o-transform:rotate(-1deg); /* Opera */
+}
+
+nav {
+    box-shadow: 1px 1px 12px #555;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+nav p {
+  color: gray;
+}
+
+.w-logo {
+	width: 70px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0px;
+    display: flex;
+}
+
+li {
+    padding: 10px;
+    font-size: 20px;
+}
+
+#reseaux {
+  flex-grow: 1;
+  text-align: right;
+}
+
+.menu{
+  color : orange;
+  box-shadow: none;
+  
+  div{
+    margin-left: 30px;
+	margin-bottom: 4px;
+  }
+}
+
+h3{
+  color: orange;
+}
+
+img {
+  max-width: 100%;
+}
+
+.btn {
+  padding: 0.5rem;
+  border-radius: 30px;
+  background-color: white;
+  border: 1px solid black;
+  margin-left: 50%;
+}
+
+.btn:hover {
+  background-color: black;
+  color: white;
+}

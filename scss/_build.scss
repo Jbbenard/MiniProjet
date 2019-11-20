@@ -1,13 +1,21 @@
 @import "grid-fram";
 
 @for $cols from 1 to $numcols+1 {
-  .s#{$cols} {
+  .xs#{$cols} {
     @include grid-taille-col($cols, $numcols);
   }
 }
 
 @for $cols from 1 to $numcols+1 {
-  @media only screen and (min-width: 56em) {
+  @media only screen and (min-width: 540px) {
+    .s#{$cols} {
+      @include grid-taille-col($cols, $numcols);
+    }
+  }
+}
+
+@for $cols from 1 to $numcols+1 {
+  @media only screen and (min-width: 720px) {
     .m#{$cols} {
       @include grid-taille-col($cols, $numcols);
     }
@@ -15,7 +23,17 @@
 }
 
 @for $cols from 1 to $numcols+1 {
-  .off#{$cols} {
-    @include grid-offset($cols, $numcols);
+  @media only screen and (min-width: 960px) {
+    .l#{$cols} {
+      @include grid-taille-col($cols, $numcols);
+    }
+  }
+}
+
+@for $cols from 1 to $numcols+1 {
+  @media only screen and (min-width: 1140px) {
+    .el#{$cols} {
+      @include grid-taille-col($cols, $numcols);
+    }
   }
 }
